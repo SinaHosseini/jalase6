@@ -18,26 +18,26 @@ def show():
 def check_game():
     global win_game
     for row in range(3):
-        sum = 0
-        sum1 = 0
+        p_s1 = 0
+        p_s2 = 0
         for cell in range(3):
             if game_board[cell][row] == "X":
-                sum1 += 1
+                p_s2 += 1
             elif game_board[row][cell] == "X":
-                sum += 1
-        if sum == 3 or sum1 == 3:
+                p_s1 += 1
+        if p_s1 == 3 or p_s2 == 3:
             print("Player 1 win!🥳")
             win_game = True
 
     for row in range(3):
-        sam = 0
-        sam1 = 0
+        p_s3 = 0
+        p_s4 = 0
         for cell in range(3):
             if game_board[cell][row] == "O":
-                sam1 += 1
+                p_s4 += 1
             elif game_board[row][cell] == "O":
-                sam += 1
-        if sum == 3 or sum1 == 3:
+                p_s3 += 1
+        if p_s3 == 3 or p_s4 == 3:
             print("Player 2 win!🥳")
             win_game = True
 
